@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/go-demo-1/mapdemo"
+	"example.com/go-demo-1/map-problems/wordcount"
 )
 
 func main() {
@@ -15,6 +15,6 @@ func main() {
 
 	for _, sentence := range listOfSentences {
 		fmt.Println(sentence)
-		fmt.Println(mapdemo.WordCount(sentence))
+		fmt.Println(wordcount.WordCount(sentence))
 	}
 }

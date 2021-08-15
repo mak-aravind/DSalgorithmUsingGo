@@ -1,4 +1,4 @@
-package mapdemo
+package wordcount
 
 import (
 	"strings"
