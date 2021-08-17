@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/go-demo/map-problems/wordcount"
+	"github.com/mak-aravind/DSalgorithmUsingGo/map-problems/wordcount"
 )
 
 func main() {

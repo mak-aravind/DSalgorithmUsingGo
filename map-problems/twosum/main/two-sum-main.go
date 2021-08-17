@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/go-demo/map-problems/twosum"
+	"github.com/mak-aravind/DSalgorithmUsingGo/map-problems/twosum"
 )
 
 func main() {
