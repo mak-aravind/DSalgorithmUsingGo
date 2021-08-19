@@ -1,0 +1,1 @@
+Given a sentence "I am the god and I am the evil". It has to output: [I:2 am:2 and:1 evil:1 god:1 the:2]

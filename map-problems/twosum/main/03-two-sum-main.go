@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
+	//KEY: target value
+	//VALUE :the array that has the couplets which will sum up to target
 	inputNumsMap := map[int][]int{
 		4:  {1, 2, 0},
 		7:  {3, 4, 5},
@@ -17,10 +19,10 @@ func main() {
 	for target, nums := range inputNumsMap {
 		fmt.Println("Finding couplet for input: ", nums)
 		fmt.Println("Target value:", target)
-		if itsThere, indices := twosum.GetAddendIndics(target, nums);itsThere{
+		if itsThere, indices := twosum.GetAddendIndics(target, nums); itsThere {
 			fmt.Println("The couplet available at positions", indices)
-		}else{
-			fmt.Println("No couplets available")
+		} else {
+			fmt.Println("Not available")
 		}
 	}
 }
