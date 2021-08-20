@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mak-aravind/DSalgorithmUsingGo/linkedlist-problems/node/singlylinked"
+	"github.com/mak-aravind/DSalgorithmUsingGo/linkedlist-problems/list/singlylinked"
 )
 
 func main() {
@@ -11,8 +11,13 @@ func main() {
 	fmt.Println("List to add:", listOfValueToAdd)
 	list := singlylinked.List{}
 
+	/*for _, value := range listOfValueToAdd {
+		list.InsertUsingHead(value)
+	}*/
+
 	for _, value := range listOfValueToAdd {
-		list.Insert(value)
+		list.InsertAtTail(value)
 	}
+
 	list.Print()
 }
