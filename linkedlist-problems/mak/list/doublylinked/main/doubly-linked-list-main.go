@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/mak-aravind/DSalgorithmUsingGo/linkedlist-problems/list/singlylinked"
+	"github.com/mak-aravind/DSalgorithmUsingGo/linkedlist-problems/mak/list/doublylinked"
 )
 
 func main() {
 	listOfValueToAddUsingHead := []int{45, 67, 80, 90}
 	fmt.Println("List to add using head:", listOfValueToAddUsingHead)
-	list := singlylinked.List{}
+	list := doublylinked.List{}
 	for _, value := range listOfValueToAddUsingHead {
 		list.InsertUsingHead(value)
 	}
