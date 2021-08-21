@@ -1,6 +1,10 @@
 package singlylinked
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/mak-aravind/DSalgorithmUsingGo/performance"
+)
 
 type Node struct {
 	data int
@@ -14,6 +18,7 @@ type List struct {
 }
 
 func (list *List) InsertUsingHead(data int) {
+	defer performance.Duration(performance.Track("InsertUsingHead"))
 	node := Node{}
 	node.data = data
 
@@ -35,18 +40,8 @@ func (list *List) InsertUsingHead(data int) {
 	}
 }
 
-func (list List) Print() {
-	if list.length == 0 {
-		fmt.Println("List is empty")
-	}
-	traversePointer := list.head
-	for i := 0; i < list.length; i++ {
-		fmt.Println("Node: ", traversePointer.data)
-		traversePointer = traversePointer.next
-	}
-}
-
 func (list *List) InsertAtTail(data int) {
+	defer performance.Duration(performance.Track("InsertAtTail"))
 	node := Node{}
 	node.data = data
 
@@ -61,5 +56,17 @@ func (list *List) InsertAtTail(data int) {
 		list.tail = &node
 		list.length++
 		return
+	}
+}
+
+func (list List) Print() {
+	if list.length == 0 {
+		fmt.Println("List is empty")
+	}
+	traversePointer := list.head
+	fmt.Print(traversePointer.data)
+	for traversePointer.next != nil {
+		fmt.Print(" -> ", traversePointer.next.data)
+		traversePointer = traversePointer.next
 	}
 }
